@@ -4,11 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(CRUD)Docly</title>
+    <title>(CRUD) Docly</title>
 </head>
 <body>
     <header>
+        <div>
+            <img src="./assets/docly-responsive-logo.png" alt="logo Docly">
+        </div>
         <h1>Formação acadêmica</h1>
     </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>DATA DE CRIAÇÃO</th>
+                    <th>TIPO</th>
+                    <th>EAD</th>
+                    <th>CONFIGURAÇÕES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>ADS</td>
+                    <td>05/11/2022</td>
+                    <td>Tecnólogo</td>
+                    <td>EAD</td>
+                    <td>
+                        <button class="btn azul">Excluir</button>
+                        <button class="btn verde">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn mobile">Cadastrar curso</button>
+        <div class="myModal">
+            <div class="content-modal">
+                <header>
+                    <h2>Curso</h2>
+                    <span class="close">&times;</span>
+                </header>
+
+                <form action="#" class="form-modal">
+                    <input type="text" class="campo">
+                    <input type="text" class="campo">
+                    <input type="text" class="campo">
+                    <input type="text" class="campo">
+                    <input type="text" class="campo">
+
+                </form>
+
+                <footer class="footer-modal">
+                    <button class="btn verde">Salvar</button>
+                    <button class="btn azul">Cancelar</button>
+                </footer>
+
+            </div>
+        </div>
+    </main>
+    <footer>&copy;2022 Docly - Todos os direitos reservados.</footer>
 </body>
 </html>
