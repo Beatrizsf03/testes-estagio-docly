@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@300;400&family=Sarala:wght@400;700&family=Silkscreen:wght@400;700&display=swap');
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #e7e7e7;
+}
+
+header img {
+    width: 8rem;
+}
+
+.header-crud {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #00232F;
+    color: #bac63e;
+    border-bottom: 2px solid #001b24;
+}
