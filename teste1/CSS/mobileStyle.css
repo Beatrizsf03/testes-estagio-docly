@@ -1,0 +1,55 @@
+@media screen and (max-width: 1675px) {
+
+    #painelDocly img {
+        width: 40rem;
+    }
+
+    #painelDocly {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    
+    body {
+        background-color: #00232F;
+    }
+    #painelDocly {
+        display: none;
+    }
+    #container {
+        width: 90%;
+    }
+    .right-login{
+        width: 100%;
+    }
+
+    button, input {
+        padding: 0.8rem 1rem;
+    }
+
+    .login {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    button:hover{
+        background-color: #9599a5;
+        color:#00232F;
+    }
+
+    .help img {
+        width: 1rem;
+    }
+
+    .logo {
+        width: 5rem;
+    }
+
+    .help, footer {
+        font-size: 1.5rem;
+    }
+}
+
