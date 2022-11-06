@@ -85,7 +85,6 @@ main {
     }
 
     .btn.mobile {
-        color: transparent;
         font-size: 0;
         padding: 4px 14px 4px;
         width: 3rem;
