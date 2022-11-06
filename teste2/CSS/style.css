@@ -54,14 +54,13 @@ main {
     padding: 1rem;
     background-color: #cccccc;
 }
-
 .btn {
     height: 2rem;
     border-radius: 33px;
     font-size: 1rem;
     padding: 7px 17px 7px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 400;
     cursor: pointer;
     background-color: #bac63e;
     color: #ffffff;
