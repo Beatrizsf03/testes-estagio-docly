@@ -24,3 +24,82 @@ header img {
     color: #bac63e;
     border-bottom: 2px solid #001b24;
 }
+
+main {
+    height: 70%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5rem auto;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+.colunas {
+    width: 100%;
+}
+
+.btn {
+    height: 2rem;
+    border-radius: 33px;
+    font-size: 1rem;
+    padding: 7px 17px 7px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #bac63e;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #121212;
+}
+
+.btn.azul {
+    background-color: #00232F;
+}
+
+.btn.azul:hover {
+    background-color: #121212;
+}
+
+
+
+.crud-footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+@media screen and (max-width:480px) {
+    .header-crud {
+        font-size: .7rem;
+    }
+
+    main{
+        padding: 0;
+        margin: 1rem 0 0 0;
+        width:100%;
+    }
+
+    .btn.mobile {
+        color: transparent;
+        font-size: 0;
+        padding: 4px 14px 4px;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+
+    .btn.mobile::before {
+        content: '+';
+        color: #ffffff;
+        font-size: 2rem;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
