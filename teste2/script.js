@@ -3,8 +3,8 @@ const openModal = () => document.getElementById('myModal').classList.add('active
 const closeModal = () => document.getElementById('myModal').classList.remove('active')
 
 const tempCourse = {
-    id: "3",
-    nome: "ads",
+    id: "4",
+    nome: "física",
     dataCriacao: "07/11/22",
     type: "tecnologo",
     ead: "true"
@@ -19,6 +19,8 @@ const createCourse = (course) => {
     dbCourse.push (course)
     setLocalStorage(dbCourse)
 }
+
+const readCourse = () => getLocalStorage()
 
 //events
 document.getElementById('registerCourse').addEventListener( 'click', openModal )
