@@ -85,7 +85,7 @@ main {
     padding: 1rem;
 }
 
-@media screen and (max-width:480px) {
+@media  (max-width:480px) {
     .header-crud {
         font-size: .7rem;
     }
@@ -94,6 +94,16 @@ main {
         padding: 0;
         margin: 1rem 0 0 0;
         width:100%;
+    }
+
+    .colunas thead {
+        display: none;
+    }
+    
+    .colunas td:not(:first-child){
+        display:flex;
+        justify-content: space-between;
+        padding: 1rem;
     }
 
     .btn.mobile {

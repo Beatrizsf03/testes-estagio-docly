@@ -1,7 +1,6 @@
 .myModal {
     width: 100%;
     height: 100%;
-    
 }
 
 .contents-modal {
@@ -24,7 +23,7 @@
 }
 
 .close {
-    padding: 4px 12px 4px;
+    padding: 4px 4px;
     width: 2rem;
     height: 2rem;
     text-align: center;
@@ -32,7 +31,7 @@
     cursor: pointer;
     background-color: #bac63e;
     color: #ffffff;
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .close:hover {
@@ -43,18 +42,33 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
+    align-items: center;
 }
 
+.form-modal input {
+    margin-bottom: 1rem;
+}
 .campo {
-    
-    width: 70%;
+    width: 60%;
     height: 2rem;
     outline-style: none;
     font-size: 1rem;
-    padding: 1.5rem 1rem;
+    padding: 1.2rem 1rem;
+    border-radius: 5px;
 }
 
 .footer-modal {
     text-align: center;
+}
+
+@media (max-width:480px){
+    .contents-modal {
+        margin: 0;
+        width: 100%;
+    }
+
+    .campo {
+        width: 90%;
+    }
+    
 }
