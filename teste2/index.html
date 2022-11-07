@@ -7,6 +7,7 @@
     <title>(CRUD) Docly</title>
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/modal.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header-crud">
@@ -41,12 +42,12 @@
                 </tr>
             </tbody>
         </table>
-        <button class="btn mobile">Cadastrar curso</button>
-        <div class="myModal">
+        <button type="button" class="btn mobile" id="registerCourse">Cadastrar curso</button>
+        <div class="myModal" id="myModal">
             <div class="contents-modal">
                 <header class="modal-header">
                     <h2>Curso</h2>
-                    <span class="close">&times;</span>
+                    <span class="close" id="modalClose">&times;</span>
                 </header>
 
                 <form action="#" class="form-modal">
