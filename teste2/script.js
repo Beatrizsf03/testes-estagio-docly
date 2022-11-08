@@ -39,10 +39,17 @@ const saveCourse = () => {
             tipo: document.getElementById('tipo').value,
             ead: document.getElementById('ead').value
         }
-        createCourse(course)
-        updateTabela() 
-        closeModal()
 
+        const index = document.getElementById('id').dataset.index
+        if(index === 'new'){
+            createCourse(course)
+            updateTabela() 
+            closeModal()
+        } else {
+            updateCourse(index, course)
+            updateTabela()
+            closeModal()
+        }
     }
 }
 
@@ -53,6 +60,7 @@ const isValidCampos = () => {
 const cleanCampos = () => {
     const campos = document.querySelectorAll('.campo')
     campos.forEach(campo => campo.value = "")
+    document.getElementById('id').dataset.index = 'new'
 }
 
 const createLinha = (course, index) => {
@@ -90,7 +98,12 @@ const editarDelete = (event) => {
         if(action === "edit"){
             editCourse(index)
         } else if(action === "delete"){
-            console.log("deletando o curso!")
+            const course = readCourse()[index]
+            const resposta = confirm(`Deseja excluir o curso ${course.name}?`)
+            if(resposta){
+                deleteCourse(index)
+                updateTabela()
+            }
         }
     }
     
@@ -98,6 +111,7 @@ const editarDelete = (event) => {
 
 const editCourse = (index) => {
     const course = readCourse()[index]
+    course.index = index
     fillCampos(course)
     openModal()
 }
@@ -108,6 +122,7 @@ const editCourse = (index) => {
     document.getElementById('data').value = course.data
     document.getElementById('tipo').value = course.tipo
     document.getElementById('ead').value = course.ead
+    document.getElementById('id').dataset.index = course.index
  }
 
 
@@ -123,3 +138,4 @@ document.getElementById('save').addEventListener( 'click', saveCourse)
 
 document.querySelector('#tabelaCourse>tbody').addEventListener( 'click', editarDelete)
 
+document.getElementById('cancel').addEventListener( "click", closeModal)
