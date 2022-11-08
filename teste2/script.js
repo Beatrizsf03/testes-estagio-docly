@@ -4,15 +4,6 @@ const closeModal = () => {
     cleanCampos()
     document.getElementById('myModal').classList.remove('active')
 }
-    
-
-const tempCourse = {
-    id: "6",
-    nome: "biologia",
-    dataCriacao: "07/11/22",
-    type: "tecnologo",
-    ead: "true"
-}
 
 const getLocalStorage = () => JSON.parse(localStorage.getItem('db_course')) ?? []
 const setLocalStorage = (dbCourse) => localStorage.setItem("db_course", JSON.stringify(dbCourse))
@@ -43,13 +34,12 @@ const saveCourse = () => {
     if(isValidCampos()){
         const course = {
             id: document.getElementById('id').value,
-            nome: document.getElementById('name').value,
-            dataCricao: document.getElementById('data').value,
+            name: document.getElementById('name').value,
+            data: document.getElementById('data').value,
             tipo: document.getElementById('tipo').value,
             ead: document.getElementById('ead').value
         }
-        createCourse(course)
-        cleanCampos()
+        createCourse(course)    
         closeModal()
 
     }
@@ -64,7 +54,28 @@ const cleanCampos = () => {
     campos.forEach(campo => campo.value = "")
 }
 
+const createLinha = (course) => {
+    const novaLinha = document.createElement('tr')
+    novaLinha.innerHTML = `
+    <td>${course.id}</td>
+    <td>${course.name}</td>
+    <td>${course.data}</td>
+    <td>${course.tipo}</td>
+    <td>${course.ead}</td>
+    <td>
+        <button class="btn azul">Excluir</button>
+        <button class="btn">Editar</button>
+    </td>
+    `
+    document.querySelector('#tabelaCourse>tbody').appendChild(novaLinha)
+}
 
+const updateTabela = () => {
+    const dbCourse = readCourse()
+    dbCourse.forEach(createLinha)
+}
+
+updateTabela()
 
 //events
 document.getElementById('registerCourse').addEventListener( 'click', openModal )

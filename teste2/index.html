@@ -17,7 +17,7 @@
         <h1>Formação acadêmica</h1>
     </header>
     <main>
-        <table class="colunas">
+        <table id="tabelaCourse" class="colunas">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -29,17 +29,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>0</td>
-                    <td>ADS</td>
-                    <td>05/11/2022</td>
-                    <td>Tecnólogo</td>
-                    <td>EAD</td>
-                    <td>
-                        <button class="btn azul">Excluir</button>
-                        <button class="btn">Editar</button>
-                    </td>
-                </tr>
+                <!---
+                    <tr>
+                        <td>0</td>
+                        <td>ADS</td>
+                        <td>05/11/2022</td>
+                        <td>Tecnólogo</td>
+                        <td>EAD</td>
+                        <td>
+                            <button class="btn azul">Excluir</button>
+                            <button class="btn">Editar</button>
+                        </td>
+                    </tr>
+                -->
             </tbody>
         </table>
         <button type="button" class="btn mobile" id="registerCourse">Cadastrar curso</button>
@@ -51,11 +53,11 @@
                 </header>
 
                 <form action="#" id="modal-form" class="form-modal">
-                    <input id="id" type="text" class="campo" placeholder="Identificador único do curso" required>
-                    <input id="name" type="text" class="campo" placeholder="Nome do curso" required>
-                    <input id="data" type="date" class="campo" required>
-                    <input id="tipo" type="text" class="campo" required>
-                    <input id="ead" type="text" class="campo" required>
+                    <input type="text" id="id" class="campo" placeholder="Identificador único do curso" required>
+                    <input type="text" id="name" class="campo" placeholder="Nome do curso" required>
+                    <input type="date" id="data" class="campo" required>
+                    <input type="text" id="tipo" class="campo" required>
+                    <input type="text" id="ead" class="campo" required>
 
                 </form>
 
