@@ -39,7 +39,8 @@ const saveCourse = () => {
             tipo: document.getElementById('tipo').value,
             ead: document.getElementById('ead').value
         }
-        createCourse(course)    
+        createCourse(course)
+        updateTabela() 
         closeModal()
 
     }
@@ -54,7 +55,7 @@ const cleanCampos = () => {
     campos.forEach(campo => campo.value = "")
 }
 
-const createLinha = (course) => {
+const createLinha = (course, index) => {
     const novaLinha = document.createElement('tr')
     novaLinha.innerHTML = `
     <td>${course.id}</td>
@@ -63,8 +64,8 @@ const createLinha = (course) => {
     <td>${course.tipo}</td>
     <td>${course.ead}</td>
     <td>
-        <button class="btn azul">Excluir</button>
-        <button class="btn">Editar</button>
+        <button type="button" class="btn azul" id="delete-${index}">Excluir</button>
+        <button type="button" class="btn" id="edit-${index}">Editar</button>
     </td>
     `
     document.querySelector('#tabelaCourse>tbody').appendChild(novaLinha)
@@ -72,8 +73,44 @@ const createLinha = (course) => {
 
 const updateTabela = () => {
     const dbCourse = readCourse()
+    cleanTabela()
     dbCourse.forEach(createLinha)
 }
+
+const cleanTabela = () => {
+    const linhas = document.querySelectorAll('#tabelaCourse>tbody tr')
+    linhas.forEach(linha => linha.parentNode.removeChild(linha))
+
+}
+
+const editarDelete = (event) => {
+    if(event.target.type === 'button'){
+        const [action, index] = event.target.id.split('-')
+        
+        if(action === "edit"){
+            editCourse(index)
+        } else if(action === "delete"){
+            console.log("deletando o curso!")
+        }
+    }
+    
+}
+
+const editCourse = (index) => {
+    const course = readCourse()[index]
+    fillCampos(course)
+    openModal()
+}
+
+ const fillCampos = (course) => {
+    document.getElementById('id').value = course.id
+    document.getElementById('name').value = course.name
+    document.getElementById('data').value = course.data
+    document.getElementById('tipo').value = course.tipo
+    document.getElementById('ead').value = course.ead
+ }
+
+
 
 updateTabela()
 
@@ -83,4 +120,6 @@ document.getElementById('registerCourse').addEventListener( 'click', openModal )
 document.getElementById('modalClose').addEventListener( 'click', closeModal )
 
 document.getElementById('save').addEventListener( 'click', saveCourse)
+
+document.querySelector('#tabelaCourse>tbody').addEventListener( 'click', editarDelete)
 
