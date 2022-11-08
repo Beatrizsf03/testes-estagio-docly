@@ -50,18 +50,18 @@
                     <span class="close" id="modalClose">&times;</span>
                 </header>
 
-                <form action="#" class="form-modal">
-                    <input type="text" class="campo">
-                    <input type="text" class="campo">
-                    <input type="text" class="campo">
-                    <input type="text" class="campo">
-                    <input type="text" class="campo">
+                <form action="#" id="modal-form" class="form-modal">
+                    <input id="id" type="text" class="campo" placeholder="Identificador único do curso" required>
+                    <input id="name" type="text" class="campo" placeholder="Nome do curso" required>
+                    <input id="data" type="date" class="campo" required>
+                    <input id="tipo" type="text" class="campo" required>
+                    <input id="ead" type="text" class="campo" required>
 
                 </form>
 
                 <footer class="footer-modal">
-                    <button class="btn">Salvar</button>
-                    <button class="btn azul">Cancelar</button>
+                    <button id="save"class="btn">Salvar</button>
+                    <button id="cancel" class="btn azul">Cancelar</button>
                 </footer>
 
             </div>
