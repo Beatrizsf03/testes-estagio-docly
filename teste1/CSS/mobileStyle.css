@@ -1,21 +1,13 @@
-@media screen and (max-width: 1675px) {
-
-    #painelDocly img {
-        width: 40rem;
-    }
-
-    #painelDocly {
-        display: flex;
-        align-items: center;
-        padding: 1rem;
-    }
-}
-
-@media screen and (max-width: 1330px) {
+@media (max-width: 1000px) {
     
     body {
         background-color: #00232F;
     }
+
+    form {
+        width: 80%;
+    }
+
     #painelDocly {
         display: none;
     }

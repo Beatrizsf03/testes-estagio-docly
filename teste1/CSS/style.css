@@ -3,10 +3,11 @@
 * {
     margin: 0;
     padding: 0;
-    border: none;
+    border: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    outline: none;
 }
 
 body {
@@ -33,27 +34,25 @@ body {
 }
 
 #painelDocly img {
-    width: 60rem;
+    width: 100%;
 }
 
 .right-login {
     width: 50%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
+    padding: 1rem;
 }
 
 form {
-    width: 70%;
+    width: 60%;
 }
 
 .form-header {
     width: 100%;
     margin-bottom: 3rem;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -100,14 +99,14 @@ button:hover {
 
 .social-media {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 2rem;
 }
 
 footer {
     display: flex;
     justify-content: center;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 footer span {
