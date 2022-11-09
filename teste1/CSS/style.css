@@ -62,6 +62,14 @@ button, input {
     padding: 0.5rem 1rem;
 }
 
+.btn-senha img {
+    width: 2rem;
+}
+
+.login.senha span img.hideBtn::before {
+    display: none;
+}
+
 .login::after {
     content: '';
     padding: 1rem;

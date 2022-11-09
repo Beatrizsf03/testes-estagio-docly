@@ -25,9 +25,12 @@
                     <label for="email"></label>
                 </div>
                 
-                <div class="login">
+                <div class="login senha">
                     <label for="senha"></label>
-                    <input type="password" name="senha" placeholder="Senha" required="required">
+                    <input type="password" name="senha" id="password" placeholder="Senha" required="required"  aria-describedby="basic-addon2">
+                    <div>
+                        <span class="btn-senha"><img src="./assets/eye-icon.svg" alt="eye-icon"></span>
+                    </div>
                 </div>
                 
                 <button><a href="#"></a>LOGIN</button>
@@ -45,5 +48,6 @@
             </form>
         </div>
     </div>
+    <script src="password.js"></script>
 </body>
 </html>
