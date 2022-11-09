@@ -73,6 +73,10 @@
     text-align: center;
 }
 
+.crud-footer span {
+    color: #bac63e;
+}
+
 @media (max-width:480px){
     .myModal {
         top:100%;
