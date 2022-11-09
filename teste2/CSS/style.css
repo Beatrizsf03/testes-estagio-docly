@@ -38,7 +38,7 @@ input[type="checkbox"]{
 }
 
 .dark,
-.dark header {
+.dark .header-crud {
   background-color: #012936;
   color: #111;
 }
