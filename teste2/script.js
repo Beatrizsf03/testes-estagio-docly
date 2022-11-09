@@ -125,8 +125,28 @@ const editCourse = (index) => {
     document.getElementById('id').dataset.index = course.index
  }
 
+const DarkMode = () => {
+    document.body.classList.toggle('dark')
+ }
 
+const changeTemaBtn = () => {
+    DarkMode()
 
+    localStorage.removeItem("dark")
+
+    if(document.body.classList.contains('dark')){
+        localStorage.setItem("dark", 1)
+    }
+}
+
+const loadTema = () => {
+    const darkMode = localStorage.getItem("dark")
+    if(darkMode) {
+        DarkMode()
+    }
+}
+
+loadTema()
 updateTabela()
 
 //events
@@ -139,3 +159,5 @@ document.getElementById('save').addEventListener( 'click', saveCourse)
 document.querySelector('#tabelaCourse>tbody').addEventListener( 'click', editarDelete)
 
 document.getElementById('cancel').addEventListener( "click", closeModal)
+
+document.getElementById('change-tema').addEventListener( 'change', changeTemaBtn)

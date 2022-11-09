@@ -9,6 +9,7 @@ body {
     height: 100vh;
     font-family: 'Roboto', sans-serif;
     background-color: #e7e7e7;
+    transition: all 0.3s ease;
 }
 
 header img {
@@ -23,6 +24,23 @@ header img {
     background-color: #00232F;
     color: #bac63e;
     border-bottom: 2px solid #001b24;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+#change-tema {
+    font-size: 2rem;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+}
+
+.dark,
+.dark header {
+  background-color: #012936;
+  color: #111;
 }
 
 main {
