@@ -30,12 +30,12 @@ input[type="checkbox"]{
     display: none;
 }
 
-#change-tema {
-    font-size: 2rem;
-    font-weight: 600;
-    user-select: none;
+#change-tema img{
+    width: 2rem;
     cursor: pointer;
 }
+
+
 
 .dark,
 .dark .header-crud {
