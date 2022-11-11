@@ -29,12 +29,15 @@
     display: flex;
     justify-content: space-between;
     height: 2rem;
-    font-size: 1rem;
+    font-size: 2rem;
+    margin-bottom: 5px;
     color: #00232F;
+    
+    
 }
 
 .close {
-    padding: 4px 4px;
+    padding: 1px;
     width: 2rem;
     height: 2rem;
     border-radius: 0 1rem 0;
