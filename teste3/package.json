@@ -1,0 +1,19 @@
+{
+  "name": "teste3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beatrizsf03/testes-estagio-docly.git"
+  },
+  "author": "Beatriz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beatrizsf03/testes-estagio-docly/issues"
+  },
+  "homepage": "https://github.com/Beatrizsf03/testes-estagio-docly#readme"
+}
