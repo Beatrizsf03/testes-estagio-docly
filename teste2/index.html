@@ -1,63 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>(CRUD) Docly</title>
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/modal.css">
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/modal.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header-crud">
-        <div>
-            <img src="./assets/docly-responsive-logo.png" alt="logo Docly">
-        </div>
-        <div>
-            <input type="checkbox" name="change-tema" id="change-tema"/>
-            <label for="change-tema" id="change-tema"><img src="./assets/darkLightIcon.svg" alt="icon tema"></label>
-          </div>
+      <div>
+        <img src="./assets/docly-responsive-logo.png" alt="logo Docly" />
+      </div>
+      <div>
+        <input type="checkbox" name="change-tema" id="change-tema" />
+        <label for="change-tema" id="change-tema"
+          ><img src="./assets/darkLightIcon.svg" alt="icon tema"
+        /></label>
+      </div>
     </header>
     <main>
-        <table id="tabelaCourse" class="colunas">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NOME</th>
-                    <th>DATA DE CRIAÇÃO</th>
-                    <th>TIPO</th>
-                    <th>EAD</th>
-                    <th>CONFIGURAÇÕES</th>
-                </tr>
-            </thead>
-            <tbody>
-              
-            </tbody>
-        </table>
-        <button type="button" class="btn mobile" id="registerCourse">Cadastrar curso</button>
-        <div class="myModal" id="myModal">
-            <div class="contents-modal">
-                <header class="modal-header">
-                    <h2>Curso</h2>
-                    <span class="close" id="modalClose">&times;</span>
-                </header>
+      <table id="tabelaCourse" class="colunas">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NOME</th>
+            <th>DATA DE CRIAÇÃO</th>
+            <th>TIPO</th>
+            <th>EAD</th>
+            <th>CONFIGURAÇÕES</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button type="button" class="btn mobile" id="registerCourse">
+        Cadastrar curso
+      </button>
+      <div class="myModal" id="myModal">
+        <div class="contents-modal">
+          <header class="modal-header">
+            <h2>Curso</h2>
+            <span class="close" id="modalClose">&times;</span>
+          </header>
 
-                <form action="#" id="modal-form" class="form-modal">
-                    <input type="text" id="id" data-index="new" class="campo" placeholder="Identificador único do curso" required>
-                    <input type="text" id="name" class="campo" placeholder="Nome do curso" required>
-                    <input type="date" id="data" class="campo" required>
-                    <input type="text" id="tipo" class="campo" placeholder="Bacharelado, Tecnólogo, Licenciatura" required>
-                    <input type="text" id="ead" class="campo" placeholder="Sim ou não" required>
-                </form>
+          <form action="#" id="modal-form" class="form-modal">
+            <input
+              type="text"
+              id="id"
+              data-index="new"
+              class="campo"
+              placeholder="Identificador único do curso"
+              required
+            />
+            <input
+              type="text"
+              id="name"
+              class="campo"
+              placeholder="Nome do curso"
+              required
+            />
+            <input type="date" id="data" class="campo" required />
+            <input
+              type="text"
+              id="tipo"
+              class="campo"
+              placeholder="Bacharelado, Tecnólogo, Licenciatura"
+              required
+            />
+            <input
+              type="text"
+              id="ead"
+              class="campo"
+              placeholder="Sim ou não"
+              required
+            />
+          </form>
 
-                <footer class="footer-modal">
-                    <button id="save"class="btn">Salvar</button>
-                    <button id="cancel" class="btn azul">Cancelar</button>
-                </footer>
-            </div>
+          <footer class="footer-modal">
+            <button id="save" class="btn">Salvar</button>
+            <button id="cancel" class="btn azul">Cancelar</button>
+          </footer>
         </div>
+      </div>
     </main>
-    <footer class="crud-footer"><p >&copy;2022<span>Docly</span> - Todos os direitos reservados.</p></footer>
-</body>
+    <footer class="crud-footer">
+      <p>&copy;2022<span>Docly</span> - Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>

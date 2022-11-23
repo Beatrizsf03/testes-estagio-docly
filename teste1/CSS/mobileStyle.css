@@ -1,48 +1,48 @@
 @media (max-width: 1000px) {
-    
-    body {
-        background-color: #00232F;
-        color: #fff;
-    }
+  body {
+    background-color: #00232f;
+    color: #fff;
+  }
 
-    form {
-        width: 80%;
-    }
+  form {
+    width: 80%;
+  }
 
-    #painelDocly {
-        display: none;
-    }
-    #container {
-        width: 90%;
-    }
-    .right-login{
-        width: 100%;
-    }
+  #painelDocly {
+    display: none;
+  }
+  #container {
+    width: 90%;
+  }
+  .right-login {
+    width: 100%;
+  }
 
-    button, input {
-        padding: 0.8rem 1rem;
-    }
+  button,
+  input {
+    padding: 0.8rem 1rem;
+  }
 
-    .login {
-        width: 100%;
-        font-size: 2rem;
-    }
+  .login {
+    width: 100%;
+    font-size: 2rem;
+  }
 
-    button:hover{
-        background-color: #9599a5;
-        color:#00232F;
-    }
+  button:hover {
+    background-color: #9599a5;
+    color: #00232f;
+  }
 
-    .help img {
-        width: 1rem;
-    }
+  .help img {
+    width: 1rem;
+  }
 
-    .logo {
-        width: 5rem;
-    }
+  .logo {
+    width: 5rem;
+  }
 
-    .help, footer {
-        font-size: 1.5rem;
-    }
+  .help,
+  footer {
+    font-size: 1.5rem;
+  }
 }
-

@@ -1,41 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@300;400&family=Sarala:wght@400;700&family=Silkscreen:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@300;400&family=Sarala:wght@400;700&family=Silkscreen:wght@400;700&display=swap");
 * {
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    font-family: 'Roboto', sans-serif;
-    background-color: #e7e7e7;
-    transition: all 0.3s ease;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: #e7e7e7;
+  transition: all 0.3s ease;
 }
 
 header img {
-    width: 8rem;
+  width: 8rem;
 }
 
 .header-crud {
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: #00232F;
-    color: #bac63e;
-    border-bottom: 2px solid #001b24;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #00232f;
+  color: #bac63e;
+  border-bottom: 2px solid #001b24;
 }
 
-input[type="checkbox"]{
-    display: none;
+input[type="checkbox"] {
+  display: none;
 }
 
-#change-tema img{
-    width: 2rem;
-    cursor: pointer;
+#change-tema img {
+  width: 2rem;
+  cursor: pointer;
 }
-
-
 
 .dark,
 .dark .header-crud {
@@ -44,102 +42,100 @@ input[type="checkbox"]{
 }
 
 main {
-    height: 70%;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 5rem auto;
-    padding: 3rem;
-    gap: 1rem;
+  height: 70%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 5rem auto;
+  padding: 3rem;
+  gap: 1rem;
 }
 
 .colunas {
-    width: 100%;
-    text-align: center;
-    user-select: none;
+  width: 100%;
+  text-align: center;
+  user-select: none;
 }
 
 .colunas th {
-    height: 3rem;
-    background-color: #00232F;
-    font-size: 1.2rem;
-    padding: 1rem;
-    color: #bac63e;
+  height: 3rem;
+  background-color: #00232f;
+  font-size: 1.2rem;
+  padding: 1rem;
+  color: #bac63e;
 }
 
 .colunas td {
-    padding: 1rem;
-    background-color: #cccccc;
+  padding: 1rem;
+  background-color: #cccccc;
 }
 .btn {
-    height: 2rem;
-    border-radius: 33px;
-    font-size: 1rem;
-    padding: 7px 17px 7px;
-    text-transform: uppercase;
-    font-weight: 400;
-    cursor: pointer;
-    background-color: #bac63e;
-    color: #ffffff;
-    transition: all 0.3s ease-in-out;
+  height: 2rem;
+  border-radius: 33px;
+  font-size: 1rem;
+  padding: 7px 17px 7px;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: #bac63e;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-    background-color: #121212;
+  background-color: #121212;
 }
 
 .btn.azul {
-    background-color: #00232F;
+  background-color: #00232f;
 }
 
 .btn.azul:hover {
-    background-color: #121212;
+  background-color: #121212;
 }
 
 .crud-footer {
-    text-align: center;
+  text-align: center;
 }
 
-@media (max-width:480px) {
-    .header-crud {
-        font-size: .7rem;
-    }
+@media (max-width: 480px) {
+  .header-crud {
+    font-size: 0.7rem;
+  }
 
-    main{
-        padding: 0;
-        margin: 1rem 0 0 0;
-        width:100%;
-    }
+  main {
+    padding: 0;
+    margin: 1rem 0 0 0;
+    width: 100%;
+  }
 
-    .colunas thead {
-        display: none;
-    }
-    
-    .colunas td:not(:first-child){
-        display:flex;
-        justify-content: space-between;
-        padding: 1rem;
-    }
+  .colunas thead {
+    display: none;
+  }
 
-    .btn.mobile {
-        font-size: 0;
-        padding: 0;
-        width: 3rem;
-        height: 3rem;
-    }
+  .colunas td:not(:first-child) {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
 
-    .btn.mobile::before {
-        content: '+';
-        color: #ffffff;
-        font-size: 2rem;
-        width: 100%;
-        height: 100%;
-    }
+  .btn.mobile {
+    font-size: 0;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+  }
 
-    .crud-footer {
-        margin-top: 80%;
-    }
+  .btn.mobile::before {
+    content: "+";
+    color: #ffffff;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .crud-footer {
+    margin-top: 80%;
+  }
 }
-
-
